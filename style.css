@@ -1,0 +1,426 @@
+/* GENERAL STYLING */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222; /* default text color for light mode */
+  background: url('images/General\ Background.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Overlay to improve text readability */
+body::after {
+  content: "";
+  position: fixed; /* fixed so it stays behind all content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2); /* light overlay for light mode */
+  z-index: -1; /* behind everything */
+}
+
+/* Dark mode overlay */
+.dark-mode body::after {
+  background: rgba(0,0,0,0.6); /* darker overlay for dark mode */
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  text-align: center;
+  color: #ffd700; /* gold-like yellow */
+}
+
+/* PARAGRAPHS */
+p {
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?technology,computer') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(41, 41, 59, 0);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e6b800;
+}
+
+/* SERVICES */
+#services {
+  position: relative;
+  background: url('images/Services.jpg') no-repeat center center/cover;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* Dark overlay */
+#services::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(215, 215, 231, 0);
+  z-index: 0;
+}
+
+#services * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #3ca0a9;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #0f294b;
+}
+
+/* Service descriptions */
+.service-description {
+  display: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: rgba(16, 3, 4, 0.331);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* BOOKING SECTION */
+#booking {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#booking form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#booking label {
+  text-align: left;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+#booking input,
+#booking select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #222;      /* dark but visible input box */
+  color: #fff;           /* text color inside input */
+}
+
+#booking button {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#booking button:hover {
+  background: #e6b800;
+}
+
+/* CONTACT */
+#contact {
+  padding: 3rem 1rem;
+  background: #43454700;
+}
+
+#contact a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* FOUNDER SECTION */
+#founder {
+  background: url('https://source.unsplash.com/1600x600/?technology,circuit') no-repeat center center/cover;
+  padding: 4rem 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.founder-overlay {
+  background: rgba(36, 36, 59, 0);
+  padding: 2rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.founder-pic {
+  width: 50vw;        /* 50% of viewport width */
+  max-width: 200px;   /* optional */
+  height: auto;
+  object-fit: contain; /* keeps full image visible */
+  border-radius: 50%;
+  border: 3px solid #3edbf0;
+  margin-bottom: 1rem;
+  display: block;      /* ensures it always renders */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 400px) {
+  .founder-pic {
+    width: 50%;
+  }
+}
+
+#founder h2 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+#founder h3 {
+  color: #ffcc00;
+  margin-top: 0.5rem;
+}
+
+#founder p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #f4f4f4;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #121212; /* dark overlay behind everything */
+  color: #eee;               /* text color */
+}
+
+.dark-mode header.hero,
+.dark-mode footer {
+  background: rgba(30,30,30,0.95); /* dark overlay */
+}
+
+.dark-mode .card {
+  background: #222;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+.dark-mode #booking {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #ffd700; /* golden headings */
+}
+
+/* Scroll-to-Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 80px;  /* Adjusted to provide space above the other buttons */
+  left: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#scrollToTop:hover {
+  background: #0056b3;
+}
+
+/* Footer Navigation Section */
+#footer-nav {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#footer-nav h3 {
+  color: #ffd700;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+#footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* Center the quick links horizontally */
+  flex-wrap: wrap;  /* Allow links to wrap on smaller screens */
+  gap: 20px;  /* Added space between the buttons */ 
+}
+
+#footer-nav ul li {
+  display: inline-block;
+}
+
+#footer-nav ul li a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;  /* Added rounded corners to buttons */
+}
+
+#footer-nav ul li a:hover {
+  background-color: #444;  /* Hover effect for better interaction */
+  border-radius: 6px; /* Maintain rounded corners on hover */
+}
+
+/* WHATSAPP CHAT BUTTON (UPDATED STYLING) */
+a {
+  position: fixed;
+  bottom: 80px;  /* Adjusted to provide space above the other buttons */
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+a:hover {
+  background: #128C7E;
+}
+
+/* DARK MODE - WhatsApp button */
+.dark-mode a {
+  background: #128C7E; /* Darker WhatsApp green in dark mode */
+  color: white;
+}
+
+.dark-mode a:hover {
+  background: #075E54;
+}
+
+/* Dark Mode Transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* BOOKING FORM - Background and Button (Dark Mode) */
+.dark-mode #booking {
+  background: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+}
+
+.dark-mode #booking button {
+  background: #f1c40f;
+  color: #000;
+}
+
+.dark-mode #booking button:hover {
+  background: #e6b800;
+}
+
+/* General Dark Mode Adjustments */
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background: #222;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.dark-mode label {
+  color: #ffd700;
+}
+
+/* Hero Section - Dark Mode */
+.dark-mode .hero {
+  background: url('https://source.unsplash.com/1600x600/?technology,computer') no-repeat center center/cover;
+  filter: brightness(0.6); /* Darken hero image for dark mode */
+}
+
+/* Service Cards in Dark Mode */
+.dark-mode .card {
+  background: #222;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+/* Footer Section - Dark Mode */
+.dark-mode footer {
+  background: #333;
+  color: #eee;
+}
