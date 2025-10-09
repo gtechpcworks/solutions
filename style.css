@@ -187,24 +187,45 @@ p {
   background: #e6b800;
 }
 
+/* RESPONSIVE FOR SMALL SCREENS */
+@media (max-width: 768px) {
+  #booking form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #booking button {
+    width: 100%;
+  }
+}
+
 /* CONTACT */
 #contact {
   padding: 3rem 1rem;
   background: #43454700;
+  text-align: left; /* Align text to the left */
+  max-width: 600px; /* Optional: control the width */
+  margin: 0 auto; /* Centers the section */
+}
+
+#contact p {
+  margin-bottom: 10px; /* Space between the lines */
+  font-size: 1.1rem; /* Slightly larger text */
+}
+
+#contact p span {
+  display: inline-block;
+  width: 120px; /* Adjust width for label spacing */
+  font-weight: bold; /* Label should stand out */
 }
 
 #contact a {
   color: #ffcc00;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* FOOTER */
-footer {
-  background: #000;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+#contact a:hover {
+  text-decoration: underline; /* Underline the link on hover */
 }
 
 /* FOUNDER SECTION */
@@ -287,7 +308,7 @@ footer {
 /* Scroll-to-Top Button */
 #scrollToTop {
   position: fixed;
-  bottom: 80px;  /* Adjusted to provide space above the other buttons */
+  bottom: 100px;  /* Adjusted to provide space above the other buttons */
   left: 20px;
   padding: 10px 20px;
   background: #007bff;
@@ -303,51 +324,15 @@ footer {
   background: #0056b3;
 }
 
-/* Footer Navigation Section */
+/* Remove Footer Navigation Section */
 #footer-nav {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-#footer-nav h3 {
-  color: #ffd700;
-  margin-bottom: 20px; /* Added margin for spacing */
-}
-
-#footer-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;  /* Center the quick links horizontally */
-  flex-wrap: wrap;  /* Allow links to wrap on smaller screens */
-  gap: 20px;  /* Added space between the buttons */ 
-}
-
-#footer-nav ul li {
-  display: inline-block;
-}
-
-#footer-nav ul li a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 10px 20px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  border-radius: 6px;  /* Added rounded corners to buttons */
-}
-
-#footer-nav ul li a:hover {
-  background-color: #444;  /* Hover effect for better interaction */
-  border-radius: 6px; /* Maintain rounded corners on hover */
+  display: none;  /* Hides the Quick Links */
 }
 
 /* WHATSAPP CHAT BUTTON (UPDATED STYLING) */
 a {
   position: fixed;
-  bottom: 80px;  /* Adjusted to provide space above the other buttons */
+  bottom: 100px;  /* Adjusted to provide space above the other buttons */
   right: 20px;
   background: #25D366;
   color: white;
