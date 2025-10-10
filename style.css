@@ -4,27 +4,46 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #222; /* default text color for light mode */
-  background: url('images/General\ Background.jpg') no-repeat center center;
+  background: url('images/Background.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   min-height: 100vh;
 }
 
-/* Overlay to improve text readability */
-body::after {
-  content: "";
-  position: fixed; /* fixed so it stays behind all content */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.2); /* light overlay for light mode */
-  z-index: -1; /* behind everything */
+/* CONTACT US BUTTON (Fixed Position, Left Side) */
+.hero .btn {
+  position: fixed;
+  bottom: 50px;  /* Adjusted to make it slightly higher than before */
+  left: 50%;
+  transform: translateX(-50%); /* Center the button horizontally */
+  background: #ffcc00;
+  color: #000;
+  padding: 6px 12px; /* Reduced padding for smaller button */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;  /* Optional: smaller font size */
+  transition: background 0.3s ease;
+  z-index: 1000; /* Ensure the button stays on top of other content */
 }
 
-/* Dark mode overlay */
-.dark-mode body::after {
-  background: rgba(0,0,0,0.6); /* darker overlay for dark mode */
+.hero .btn:hover {
+  background: #e6b800;
+}
+
+/* DARK MODE - Contact Us Button */
+.dark-mode .hero .btn {
+  background: #333; /* Dark button background */
+  color: #fff;
+}
+
+.dark-mode .hero .btn:hover {
+  background: #555; /* Darker hover effect */
+}
+
+/* Dark Mode Adjustments for Hero Section */
+.dark-mode .hero {
+  filter: brightness(0.6); /* Darken hero image for dark mode */
 }
 
 /* HEADINGS */
@@ -65,22 +84,6 @@ p {
 .hero h2 {
   font-size: 2rem;
   color: #ffcc00;
-}
-
-.btn {
-  display: inline-block;
-  background: #ffcc00;
-  color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  margin-top: 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #e6b800;
 }
 
 /* SERVICES */
@@ -246,19 +249,19 @@ p {
 .founder-pic {
   width: 50vw;        /* 50% of viewport width */
   max-width: 200px;   /* optional */
-  height: auto;
-  object-fit: contain; /* keeps full image visible */
-  border-radius: 50%;
+  height: 200px;      /* Set a fixed height for perfect roundness */
+  object-fit: cover;  /* Ensures the image covers the entire space */
+  border-radius: 50%; /* Makes the image circular */
   border: 3px solid #3edbf0;
   margin-bottom: 1rem;
-  display: block;      /* ensures it always renders */
+  display: block;      /* Ensures it always renders */
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (max-width: 400px) {
   .founder-pic {
-    width: 50%;
+    width: 50%;    /* Adjust for smaller screens */
   }
 }
 
@@ -329,7 +332,7 @@ p {
   display: none;  /* Hides the Quick Links */
 }
 
-/* WHATSAPP CHAT BUTTON (UPDATED STYLING) */
+/* WHATSAPP CHAT BUTTON (Updated Styling) */
 a {
   position: fixed;
   bottom: 100px;  /* Adjusted to provide space above the other buttons */
