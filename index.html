@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTech Solutions | PC Works</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Add the latest version of EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>GTECH SOLUTIONS</h1>
+      <h2>PC WORKS</h2>
+      <p>💻 We Fix • We Upgrade • We Empower.<P></P>
+🌍 GTS – Your Gateway to Smart Tech & Success.<P>
+<P></P>Trusted PC Partner | Repairs • Software • Academic Work • Online Services
+</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="card" data-service="software">Software/Hardware Lessons</div>
+      <div class="card" data-service="virus">Virus Removal</div>
+      <div class="card" data-service="windows">Windows & Linux Installation</div>
+      <div class="card" data-service="office">Microsoft Office Installation</div>
+      <div class="card" data-service="activation">Microsoft Products Activation</div>
+      <div class="card" data-service="graphics">Graphics & Designing</div>
+      <div class="card" data-service="hinge">Hinge Repair</div>
+      <div class="card" data-service="slow">Slow Running PC</div>
+      <div class="card" data-service="writing">Academic Writing</div> <!-- Added Academic Writing service -->
+    </div>
+
+    <!-- Descriptions (hidden by default) -->
+    <div class="service-description" id="software">
+      <p>We offer comprehensive software and hardware training programs designed to meet the needs of both beginners and experienced users. Our lessons cover essential computer skills, troubleshooting techniques, and advanced tools, ensuring participants gain practical knowledge that can be applied immediately in real-world scenarios.</p>
+    </div>
+    <div class="service-description" id="virus">
+      <p>Our complete virus removal and PC cleanup services are designed to eliminate malware, spyware, and harmful software from your devices. We ensure your computer is restored to optimal performance while safeguarding your data, enhancing security, and preventing future infections for a seamless computing experience.</p>
+    </div>
+    <div class="service-description" id="windows">
+      <p>We provide professional installation and configuration of Windows and Linux operating systems on both PCs and laptops. Our service includes proper setup, system updates, driver installations, and performance tuning, allowing your devices to run smoothly and efficiently right from the start.</p>
+    </div>
+    <div class="service-description" id="office">
+      <p>Our Microsoft Office installation services ensure that you have access to all the essential productivity tools for professional and personal use. We handle setup, activation, and configuration of Word, Excel, PowerPoint, and other Office applications, enabling you to work efficiently and effectively.</p>
+    </div>
+    <div class="service-description" id="activation">
+      <p>We provide full activation services for Microsoft products, ensuring that your software functions correctly and legally. This service guarantees access to all features, updates, and support, helping you maintain productivity without interruptions or limitations.</p>
+    </div>
+    <div class="service-description" id="graphics">
+      <p>Our graphics and design services cover a wide range of creative needs, including logo design, banners, social media content, and other visual materials. We combine creativity and technical skills to produce professional, eye-catching designs that effectively communicate your brand or message.</p>
+    </div>
+    <div class="service-description" id="hinge">
+      <p>We specialize in laptop hinge repair and replacement to restore smooth opening and closing of your device. Our services ensure your laptop remains fully functional and structurally stable, preventing further damage and prolonging the lifespan of your equipment.</p>
+    </div>
+    <div class="service-description" id="slow">
+      <p>Our PC optimization services are designed to improve the speed and reliability of slow computers. We perform thorough diagnostics, remove unnecessary files and programs, optimize system settings, and enhance overall performance to ensure your device runs faster and more efficiently.</p>
+    </div>
+    <div class="service-description" id="writing"> <!-- Added description for Academic Writing -->
+      <p>Our Academic Writing service provides expert assistance in crafting high-quality research papers, essays, thesis, and dissertations across various fields. Whether you're seeking help with structure, content, citations, or language, our team ensures that your work meets academic standards and demonstrates critical thinking, clarity, and originality.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section id="booking">
+    <h2>Book a Service</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="service">Select Service:</label>
+      <select id="service" name="service" required>
+        <option value="">--Choose a Service--</option>
+        <option>Software/Hardware Lessons</option>
+        <option>Virus Removal</option>
+        <option>Windows & Linux Installation</option>
+        <option>Microsoft Office Installation</option>
+        <option>Microsoft Products Activation</option>
+        <option>Graphics & Designing</option>
+        <option>Hinge Repair</option>
+        <option>Slow Running PC</option>
+        <option>Academic Writing</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="contact">Phone Number (Include Country Code):</label>
+      <input type="tel" id="contact" name="contact" placeholder="e.g., +254XXXXXXX" value="+254" required>
+
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+    <p id="confirmation" style="display:none; color:green; margin-top:10px;">
+      ✅ Thank you! Your booking has been submitted. We will contact you soon.
+    </p>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p> We exist to ensure that businesses and individuals have access to expert technical support,
+      reliable hardware repairs, and seamless software installations. Our goal is to enhance operational
+      efficiency and boost technological confidence.</p>
+    <h3>Mission</h3>
+    <p>Our mission is to provide top-tier computer software installation and hardware repair services,
+      ensuring seamless technology experiences for businesses and individuals. We are committed to
+      delivering reliable, efficient, and innovative IT solutions.</p>
+    <h3>Vision</h3>
+    <p>To be a leading technology solutions provider, recognized for excellence in computer software
+      installations and hardware repairs.</p>
+  </section>
+
+  <!-- FOUNDER SECTION -->
+  <section id="founder">
+    <div class="founder-overlay">
+      <h2>Founder</h2>
+      <img src="https://github.com/gtechpcworks/solutions/blob/main/founder.png?raw=true" alt="" class="founder-pic">
+      <h3>Shifu</h3>
+      <p>Founder of GTS, passionate about IT and committed to providing
+      reliable PC services, including hardware repairs, software installation,
+      and training.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><span>Email:</span> gtechpcworks@gmail.com</p>
+    <p><span>Contact:</span> +254106737432</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 GTS. All rights reserved.</p>
+  </footer>
+
+  <!-- WHATSAPP CHAT BUTTON (NEW FEATURE) -->
+  <a href="https://wa.me/254106737432" 
+     target="_blank" 
+     style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 18px; border-radius:30px; font-weight:bold; text-decoration:none; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+     💬 Chat with Us
+  </a>
+
+  <!-- DARK/LIGHT MODE TOGGLE (NEW FEATURE) -->
+  <button id="modeToggle" 
+          style="position:fixed; top:20px; right:20px; padding:8px 14px; border:none; border-radius:8px; cursor:pointer; background:#333; color:#fff;">
+    🌙 Dark Mode
+  </button>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollToTop" 
+          style="position:fixed; bottom:20px; left:20px; padding:10px 20px; background:#007bff; color:white; border:none; border-radius:50%; font-size:20px; cursor:pointer;">
+    ↑
+  </button>
+
+ <!-- JavaScript -->
+<script>
+  // Initialize EmailJS with user ID
+  emailjs.init("S_KaBpRaaHRPmUnFw");  // This is your actual Public API Key
+
+  // Scroll to Top functionality
+  document.getElementById("scrollToTop").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Toggle service descriptions
+  const cards = document.querySelectorAll('.card');
+  const descriptions = document.querySelectorAll('.service-description');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const target = card.getAttribute('data-service');
+      descriptions.forEach(desc => {
+        if(desc.id === target){
+          desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+        } else {
+          desc.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Booking form confirmation and WhatsApp message
+  document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Get form data
+    const name = document.getElementById('name').value;
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const contact = document.getElementById('contact').value;
+
+    // Validate form data to ensure no field is missing
+    if (!name || !service || !date || !time || !contact) {
+      alert("Please fill out all fields.");
+      return;  // Stop form submission if any field is missing
+    }
+
+    // Show confirmation message
+    document.getElementById("confirmation").style.display = "block";
+
+    // Prepare the WhatsApp message
+    const whatsappMessage = `New Booking:\nName: ${name}\nService: ${service}\nDate: ${date}\nTime: ${time}\nContact: ${contact}`;
+
+    // Open WhatsApp with the message
+    const whatsappUrl = `https://wa.me/254106737432?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
+
+    // Prepare email data
+    const emailData = {
+      name: name,
+      service: service,
+      date: date,
+      time: time,
+      contact: contact
+    };
+
+    // Send email using EmailJS
+    emailjs.send("service_nifebxh", "template_aw54vjh", emailData)
+      .then(function(response) {
+        console.log("Success:", response);
+      }, function(error) {
+        console.log("Error:", error);
+        alert("Sorry, there was an error sending your booking. Please try again.");
+      });
+
+    // Optionally, reset the form after submission
+    this.reset();
+  });
+
+  // Dark/Light Mode toggle
+  const toggleBtn = document.getElementById("modeToggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")){
+      toggleBtn.textContent = "☀️ Light Mode";
+      toggleBtn.style.background = "#f1c40f";
+      toggleBtn.style.color = "#000";
+    } else {
+      toggleBtn.textContent = "🌙 Dark Mode";
+      toggleBtn.style.background = "#333";
+      toggleBtn.style.color = "#fff";
+    }
+  });
+
+  // Dynamic Title Blinking effect (alternating title text)
+  setInterval(function() {
+    document.title = document.title === "GTech Solutions | PC Works" ? "🔧 GTech Solutions | PC Works 🔧" : "GTech Solutions | PC Works";
+  }, 1000);  // Toggle the title every 1 second
+</script>
+
+</body>
+</html>
